@@ -2,7 +2,7 @@
   "name": "keep-track",
   "version": "0.0.1",
   "description": "The perfect, event-driven thing for keeping track of objects, on top of Proxy API",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Hkh12/keep-track.git"
@@ -20,5 +20,5 @@
     "url": "https://github.com/Hkh12/keep-track/issues"
   },
   "homepage": "https://github.com/Hkh12/keep-track#readme",
-  "types": ["./index.d.ts"]
+  "types": ["./lib/index.d.ts"]
 }
