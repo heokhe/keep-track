@@ -19,5 +19,6 @@
   "bugs": {
     "url": "https://github.com/Hkh12/keep-track/issues"
   },
-  "homepage": "https://github.com/Hkh12/keep-track#readme"
+  "homepage": "https://github.com/Hkh12/keep-track#readme",
+  "types": ["./index.d.ts"]
 }
