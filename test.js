@@ -21,8 +21,3 @@ const p_t1 = keepTrack(t1, {
 
 p_t1.a = 2
 p_t1.d = 4
-setTimeout(() => {
-	delete p_t1.b
-	console.log(p_t1);
-	
-}, 1000)

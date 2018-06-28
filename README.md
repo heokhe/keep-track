@@ -32,7 +32,7 @@ now we have the `proxified` object that is reactive. before a key change, the `s
 ```javascript
 set(n, o, k){
 	if (key === 'age' && n > 110){
-		console.log('age cannot be more than 100')
+		console.log('age cannot be more than 110')
 		return false // or null
 	}
 }

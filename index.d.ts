@@ -1,4 +1,5 @@
-declare type KT_handler = function(newValue, oldValue): void
+declare type keyName = string | number
+declare type KT_handler = (newValue: any, oldValue: any, key: keyName, object: object) => ay
 declare interface KT_Handlers {
 	set?: KT_handler
 	setted?: KT_handler
