@@ -7,7 +7,7 @@ const t1 = {
 }
 
 const p_t1 = keepTrack(t1, {
-	async set(n, o, k, t){
+	async willSet(n, o, k, t){
 		if (k in t){
 			console.log(`change done | ${k}: ${o} => ${n} \n`);
 		} else {
