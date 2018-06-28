@@ -27,14 +27,27 @@ let proxified = keepTrack(target, {
 })
 ```
 now we have the `proxified` object that is reactive. before a key change, the `set` event handler will be executed; after the change, the `setted` handler will be executed with exactly same arguments.
-### Aborting changes
-`set` handler function is able to return something. if the returned value is truthy (or `undefined`), change will be aborted.
+### Validation
+`set` handler function can return something. if the returned value is truthy (or `undefined`), change will be aborted.
 ```javascript
 set(n, o, k){
-	if (key === 'age' && n > 110){
+	if (k === 'age' && n > 110){
 		console.log('age cannot be more than 110')
-		return false // or null
+		return false
 	}
 }
 ```
-note that __the operation in `set` handler should be synchronous.__
+#### Async validations
+for async operations, you can use __Promises__:
+```javascript
+set(n, o, k){
+	someAsyncValidation(n).then(result => result.ok)
+}
+```
+Or, do it in `async/await` way:
+```javascript
+async set(n, o, k){
+	const {ok} = await someAsyncValidation(n)
+	return ok
+}
+```
